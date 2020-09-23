@@ -14,7 +14,7 @@ arguments = {
         }
 
 
-def the_reqman(paramss, request_type, after_url):
+def the_reqman(paramss, req_type, after_url):
     if req_type == 'POST':
 
         x = requests.post(url = base_url + after_url, data = paramss, timeout = 20)
@@ -30,7 +30,9 @@ def the_reqman(paramss, request_type, after_url):
     print("The Request code : " + str(x.status_code))
 
 while True:
-    after_url = input(AfterUrl>)
-    the_reqman(paramss = arguments, request_type input("ReqType>"), afterurl)
+    try:
+        after_url = input("AfterUrl>")
+        the_reqman(paramss = arguments, request_type = input("ReqType>"), after_url = after_url)
     except:
         print("EXCEPTION")
+
