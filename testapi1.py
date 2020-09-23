@@ -31,6 +31,12 @@ def the_reqman(paramss, req_type, after_url):
     print("Results saved !")
     print("The Request code : " + str(x.status_code))
 
+try:
+  requests.get(base_url)
+except:
+  print('[-] Host is not up.')
+  exit(0)
+
 while True:
     try:
         after_url = input("AfterUrl>")
