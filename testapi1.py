@@ -25,8 +25,8 @@ def the_reqman(paramss, req_type, after_url):
     elif req_type == 'PUT':
         x = requests.put(url = base_url + after_url, json = paramss, timeout = 20)
     file = open("testResult.html", "w+")
-    pfile.seek(0)
-    pfile.truncate()
+    file.seek(0)
+    file.truncate()
     file.write(x.text)
     print("Results saved !")
     print("The Request code : " + str(x.status_code))
