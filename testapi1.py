@@ -28,19 +28,21 @@ def the_reqman(paramss, req_type, after_url):
     file.seek(0)
     file.truncate()
     file.write(x.text)
+    print(x.text)
     print("Results saved !")
     print("The Request code : " + str(x.status_code))
 
 try:
   requests.get(base_url)
-except:
-  print('[-] Host is not up.')
-  exit(0)
-
-while True:
+  print('[+] Host is up.')
+  while True:
     try:
         after_url = input("AfterUrl>")
         the_reqman(paramss = arguments, req_type = input("ReqType>"), after_url = after_url)
     except:
         print("EXCEPTION")
+except:
+  print('[-] Host is not up.')
+
+
 
