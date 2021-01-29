@@ -7,7 +7,7 @@ base_url = "http://24.68.93.213:8000/api/"
 
 arguments = {
         "email": "pooyaimani59@gmail.com",
-        "password": "Pooya1274406641",
+        "password": "IamPouya111111",
         "username": "pouyad_ai",
         "gender": "true",
         "age": ""
